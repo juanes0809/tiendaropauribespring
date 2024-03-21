@@ -9,27 +9,27 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "nombres",nullable = false, length = 50)
-    private String nombres;
+    private String nombres; //No vacio-solo letras y espacios-longitud maxima de 50 caracteres
     @Column(name = "apellidos", nullable = false, length = 50)
-    private String apellidos;
-    @Column(name = "cedula", nullable = false, length = 30)
-    private String cedula;
+    private String apellidos; //No validar nada
+    @Column(name = "cedula", nullable = false, length = 12)
+    private String cedula; //Solo numeros sin espacios-no vacio-longitud 12
     @Column(name = "correo", nullable = false, length = 50)
-    private String correo;
+    private String correo; //No vacio y formato convencional de correo
     @Column(name = "direccion", nullable = false, length = 40)
-    private String direccion;
+    private String direccion; //No se valida
     @Column(name = "sexo", nullable = false, length = 20)
-    private String sexo;
+    private String sexo; //Solo debe contener las palabras "masculino/femenino"
     @Column(name = "medioPago", nullable = false, length = 50)
-    private String medioPago;
+    private String medioPago; //No se valida
     @Column(name = "pais", nullable = false, length = 20)
-    private String pais;
+    private String pais; //No se valida
     @Column(name = "departamento", nullable = false, length = 50)
-    private String departamento;
+    private String departamento; //No se valida
     @Column(name = "municipio", nullable = false, length = 30)
-    private String municipio;
+    private String municipio; //No se valida
     @Column(name = "codigoPostal", nullable = false, length = 20)
-    private String codigoPostal;
+    private String codigoPostal; //No vacio-solo numeros y longitud de 6
 
     public Usuario() {
     }
